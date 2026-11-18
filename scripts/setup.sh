@@ -176,7 +176,6 @@ else
     cat > "$VITE_CONFIG" <<'VITE'
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
     plugins: [
@@ -184,7 +183,6 @@ export default defineConfig({
             input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
         }),
-        tailwindcss(),
     ],
     server: {
         host: '0.0.0.0',
@@ -234,6 +232,9 @@ fi
 
 paso "Ejecutando migraciones contra PostgreSQL"
 ejecutar_en_proyecto php artisan migrate --force
+
+paso "Cargando categorías base"
+ejecutar_en_proyecto php artisan db:seed --class=CategorySeeder --force
 
 # ---------------------------------------------------------------------------
 # 7. Dependencias de Node y build
