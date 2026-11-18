@@ -1,0 +1,25 @@
+# --- Servidor multiproyecto -------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# Los proyectos viven en www/. El blog se versiona; el resto queda fuera.
+www/*
+!www/.gitkeep
+!www/blog-semana-2026/
+
+# El blog trae su propio .gitignore (vendor, node_modules, .env, build, storage)
+
+# Volúmenes / datos locales (si se cambia a bind mounts)
+data/
+pgdata/
+postgres_data/
+pgadmin_data/
+volumes/
+
+# Respaldos y temporales
+respaldos/
+*.sql
+*.log
+.DS_Store
+Thumbs.db
