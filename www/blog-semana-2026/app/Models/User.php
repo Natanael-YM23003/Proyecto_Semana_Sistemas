@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -15,32 +14,19 @@ class User extends Authenticatable
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
+    // Campos que se guardan desde el formulario.
     protected $fillable = [
         'name',
         'email',
         'password',
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var list<string>
-     */
+    // No se muestran al convertir el usuario a JSON.
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
     protected function casts(): array
     {
         return [
@@ -49,17 +35,13 @@ class User extends Authenticatable
         ];
     }
 
-    /**
-     * Entradas creadas desde el panel por este usuario.
-     */
+    // Entradas creadas por este usuario.
     public function posts(): HasMany
     {
         return $this->hasMany(Post::class);
     }
 
-    /**
-     * Entradas en las que aparece como autor.
-     */
+    // Entradas donde aparece como autor.
     public function authoredPosts(): BelongsToMany
     {
         return $this->belongsToMany(Post::class)->withTimestamps();

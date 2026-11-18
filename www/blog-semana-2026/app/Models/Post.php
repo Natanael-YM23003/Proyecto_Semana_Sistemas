@@ -7,14 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\Storage;
 
 class Post extends Model
 {
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
+    // Campos que se guardan desde el formulario.
     protected $fillable = [
         'category_id',
         'user_id',
@@ -28,11 +25,6 @@ class Post extends Model
         'published_at',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
     protected function casts(): array
     {
         return [
@@ -46,17 +38,13 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
-    /**
-     * Integrante que creó la entrada en el panel.
-     */
+    // Quién creó la entrada en el panel.
     public function creator(): BelongsTo
     {
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    /**
-     * Los dos integrantes que firman la entrada.
-     */
+    // Integrantes que firman la entrada.
     public function authors(): BelongsToMany
     {
         return $this->belongsToMany(User::class)->withTimestamps();
@@ -72,18 +60,29 @@ class Post extends Model
         return $this->hasMany(Evidence::class);
     }
 
+    // Solo entradas publicadas.
     public function scopePublished(Builder $query): Builder
     {
         return $query->where('status', 'published');
     }
 
+    // Solo borradores.
     public function scopeDraft(Builder $query): Builder
     {
         return $query->where('status', 'draft');
     }
 
+    // Las rutas usan el slug.
     public function getRouteKeyName(): string
     {
         return 'slug';
+    }
+
+    // Ruta pública de la portada.
+    public function coverUrl(): ?string
+    {
+        return $this->cover_image
+            ? Storage::disk('public')->url($this->cover_image)
+            : null;
     }
 }

@@ -7,11 +7,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Category extends Model
 {
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
+    // Campos que se guardan desde el formulario.
     protected $fillable = [
         'name',
         'slug',
@@ -23,6 +19,7 @@ class Category extends Model
         return $this->hasMany(Post::class);
     }
 
+    // Las rutas usan el slug.
     public function getRouteKeyName(): string
     {
         return 'slug';

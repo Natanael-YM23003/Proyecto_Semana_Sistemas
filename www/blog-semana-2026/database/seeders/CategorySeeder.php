@@ -7,9 +7,7 @@ use Illuminate\Database\Seeder;
 
 class CategorySeeder extends Seeder
 {
-    /**
-     * Categorías que corresponden a las actividades de la semana.
-     */
+    // Categorías de las actividades de la semana.
     public function run(): void
     {
         $categorias = [

@@ -7,18 +7,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Evidence extends Model
 {
-    /**
-     * Laravel pluraliza "Evidence" como "evidence"; la tabla es "evidences".
-     *
-     * @var string
-     */
+    // Laravel la buscaría en "evidence"; la tabla se llama "evidences".
     protected $table = 'evidences';
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
+    // Campos que se guardan desde el formulario.
     protected $fillable = [
         'post_id',
         'user_id',
@@ -27,11 +19,6 @@ class Evidence extends Model
         'taken_at',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
     protected function casts(): array
     {
         return [

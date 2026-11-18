@@ -10,14 +10,11 @@ class DatabaseSeeder extends Seeder
 {
     use WithoutModelEvents;
 
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
         $this->call(CategorySeeder::class);
 
-        // Usuario de prueba para entrar al panel mientras se crean los reales.
+        // Usuario temporal para probar el login.
         User::firstOrCreate(
             ['email' => 'test@example.com'],
             ['name' => 'Test User', 'password' => 'password'],
