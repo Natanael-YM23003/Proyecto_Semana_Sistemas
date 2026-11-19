@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class Post extends Model
 {
@@ -87,5 +88,13 @@ class Post extends Model
         return $this->cover_image
             ? Storage::disk('public')->url($this->cover_image)
             : null;
+    }
+
+    // Texto corto para las tarjetas del blog.
+    public function summary(int $limit = 150): string
+    {
+        $texto = $this->excerpt ?: $this->content;
+
+        return Str::limit(trim(preg_replace('/\s+/', ' ', $texto)), $limit);
     }
 }

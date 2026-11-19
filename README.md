@@ -34,7 +34,8 @@ El setup construye la imagen, inicia los servicios y prepara `blog-semana-2026`,
 - `compose.yaml`: los tres servicios (servidor, PostgreSQL y pgAdmin).
 - `docker/`: Dockerfile, Apache, PHP, pgAdmin e índice de proyectos.
 - `scripts/`: instalación, verificación y atajos.
-- `www/blog-semana-2026/`: el proyecto Laravel 12 con el panel de administración y el CRUD de entradas.
+- `www/blog-semana-2026/`: el proyecto Laravel 12 con el blog público y el panel de administración.
+- `www/blog-semana-2026/contenido/`: los archivos JSON con el contenido que se carga al blog.
 - `.env.example`: plantilla del `.env` del servidor (UID/GID).
 
 ## Direcciones locales
@@ -78,6 +79,17 @@ lv blog-semana-2026 npm run dev
 ```
 
 Cada proyecto nuevo en `www/` se publica en `http://<nombre>.localhost:8083`. El índice usa su carpeta `public/`; Vite comparte el puerto 5173, así que solo un proyecto puede ejecutar `npm run dev` a la vez.
+
+## Contenido del blog
+
+Las entradas se escriben en archivos JSON dentro de `www/blog-semana-2026/contenido/`. Cada integrante hace commit de su archivo y luego lo carga a la base:
+
+```bash
+docker compose exec -u www-data -w /var/www/html/blog-semana-2026 servidor \
+  php artisan contenido:importar
+```
+
+El formato, los campos y los correos de los autores están explicados en `www/blog-semana-2026/contenido/README.md`. Volver a importar actualiza por `slug`, no duplica.
 
 ## Crear otro proyecto
 
