@@ -77,14 +77,52 @@
         <div class="form-text">Opcional. Es el texto corto que se muestra en el listado.</div>
     </div>
 
+    <div class="col-md-6">
+        <label for="speaker" class="form-label">Expositor o responsable</label>
+        <input id="speaker" type="text" name="speaker" maxlength="150"
+               value="{{ old('speaker', $post->speaker ?? '') }}"
+               class="form-control @error('speaker') is-invalid @enderror">
+        @error('speaker')
+            <div class="invalid-feedback">{{ $message }}</div>
+        @enderror
+        <div class="form-text">Opcional. Quién dio la ponencia o dirigió la actividad.</div>
+    </div>
+
     <div class="col-12">
-        <label for="content" class="form-label">Contenido</label>
-        <textarea id="content" name="content" rows="12"
+        <label for="content" class="form-label">Desarrollo de la actividad</label>
+        <textarea id="content" name="content" rows="10"
                   class="form-control @error('content') is-invalid @enderror" required
         >{{ old('content', $post->content ?? '') }}</textarea>
         @error('content')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
+        <div class="form-text">
+            Cuenta qué se hizo: las ideas centrales en las ponencias, las herramientas y el
+            procedimiento en los talleres, la dinámica del bingo, los proyectos y tecnologías
+            de la feria, o cómo se desarrollaron las actividades de convivencia.
+        </div>
+    </div>
+
+    <div class="col-12">
+        <label for="learnings" class="form-label">Aprendizajes y resultados</label>
+        <textarea id="learnings" name="learnings" rows="5"
+                  class="form-control @error('learnings') is-invalid @enderror" required
+        >{{ old('learnings', $post->learnings ?? '') }}</textarea>
+        @error('learnings')
+            <div class="invalid-feedback">{{ $message }}</div>
+        @enderror
+        <div class="form-text">Lo que aprendieron o los resultados que dejó la actividad.</div>
+    </div>
+
+    <div class="col-12">
+        <label for="reflection" class="form-label">Reflexión personal</label>
+        <textarea id="reflection" name="reflection" rows="5"
+                  class="form-control @error('reflection') is-invalid @enderror" required
+        >{{ old('reflection', $post->reflection ?? '') }}</textarea>
+        @error('reflection')
+            <div class="invalid-feedback">{{ $message }}</div>
+        @enderror
+        <div class="form-text">Una reflexión por entrada, en nombre de los autores.</div>
     </div>
 
     <div class="col-md-6">

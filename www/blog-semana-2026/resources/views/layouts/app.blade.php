@@ -35,6 +35,9 @@
                             <a class="nav-link" href="{{ route('posts.index') }}">Entradas</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('categories.index') }}">Categorías</a>
+                        </li>
+                        <li class="nav-item">
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <button type="submit" class="btn btn-outline-light btn-sm my-2 my-lg-0 ms-lg-3">
@@ -56,6 +59,12 @@
         @if (session('status'))
             <div class="alert alert-success" role="alert">
                 {{ session('status') }}
+            </div>
+        @endif
+
+        @if (session('error'))
+            <div class="alert alert-danger" role="alert">
+                {{ session('error') }}
             </div>
         @endif
 

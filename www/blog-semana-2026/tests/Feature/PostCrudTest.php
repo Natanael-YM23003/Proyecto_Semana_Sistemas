@@ -39,6 +39,8 @@ class PostCrudTest extends TestCase
             'activity_date' => '2026-11-16',
             'excerpt' => 'Resumen de las ponencias.',
             'content' => 'Contenido completo de la entrada.',
+            'learnings' => 'Aprendimos a ordenar las ideas de una ponencia.',
+            'reflection' => 'La actividad me ayudó a ver la carrera de otra forma.',
             'status' => 'published',
             'authors' => [User::factory()->create()->id],
         ];
@@ -57,6 +59,7 @@ class PostCrudTest extends TestCase
 
         $response = $this->actingAs($autor)->post('/posts', [
             ...$this->datos(),
+            'speaker' => 'Ing. Laura Méndez',
             'authors' => [$autor->id, $otro->id],
             'cover_image' => UploadedFile::fake()->create('portada.jpg', 200, 'image/jpeg'),
         ]);
@@ -68,6 +71,9 @@ class PostCrudTest extends TestCase
         $this->assertSame('ponencias-del-dia-uno', $post->slug);
         $this->assertSame('published', $post->status);
         $this->assertNotNull($post->published_at);
+        $this->assertSame('Ing. Laura Méndez', $post->speaker);
+        $this->assertSame('Aprendimos a ordenar las ideas de una ponencia.', $post->learnings);
+        $this->assertSame('La actividad me ayudó a ver la carrera de otra forma.', $post->reflection);
         $this->assertSame($autor->id, $post->user_id);
         $this->assertEqualsCanonicalizing([$autor->id, $otro->id], $post->authors->pluck('id')->all());
         Storage::disk('public')->assertExists($post->cover_image);
@@ -92,7 +98,7 @@ class PostCrudTest extends TestCase
 
         $this->actingAs($autor)
             ->post('/posts', ['title' => '', 'authors' => []])
-            ->assertSessionHasErrors(['title', 'category_id', 'activity_date', 'content', 'status', 'authors']);
+            ->assertSessionHasErrors(['title', 'category_id', 'activity_date', 'content', 'learnings', 'reflection', 'status', 'authors']);
 
         $this->assertSame(0, Post::count());
     }
