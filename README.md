@@ -34,7 +34,7 @@ El setup construye la imagen, inicia los servicios y prepara `blog-semana-2026`,
 - `compose.yaml`: los tres servicios (servidor, PostgreSQL y pgAdmin).
 - `docker/`: Dockerfile, Apache, PHP, pgAdmin e índice de proyectos.
 - `scripts/`: instalación, verificación y atajos.
-- `www/blog-semana-2026/`: el proyecto Laravel 12, todavía sin los módulos del blog.
+- `www/blog-semana-2026/`: el proyecto Laravel 12 con el panel de administración y el CRUD de entradas.
 - `.env.example`: plantilla del `.env` del servidor (UID/GID).
 
 ## Direcciones locales

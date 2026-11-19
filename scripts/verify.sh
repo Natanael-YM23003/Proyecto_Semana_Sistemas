@@ -92,10 +92,10 @@ else
     fallo "http://${PROYECTO}.localhost:8083 -> ${codigo_blog:-sin respuesta}"
 fi
 
-if grep -qi "laravel" <<<"$html_blog"; then
-    ok "La welcome page de Laravel responde"
+if grep -qi "semana de sistemas" <<<"$html_blog"; then
+    ok "La portada del blog responde"
 else
-    fallo "La página del blog no parece la welcome page de Laravel"
+    fallo "La portada del blog no muestra el nombre del proyecto"
 fi
 
 # pgAdmin tarda en arrancar la primera vez (inicializa el volumen).
