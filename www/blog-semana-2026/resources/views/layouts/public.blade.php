@@ -8,9 +8,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-sds py-3">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('home') }}">
+            <a class="navbar-brand fw-bold" href="{{ route('home') }}">
                 Semana de Sistemas 2026
             </a>
 
@@ -21,7 +21,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="menuPublico">
-                <ul class="navbar-nav me-auto">
+                <ul class="navbar-nav me-auto ms-lg-3 gap-lg-2">
                     <li class="nav-item">
                         <a class="nav-link @if (request()->routeIs('home')) active @endif"
                            href="{{ route('home') }}">Inicio</a>
@@ -32,14 +32,14 @@
                     </li>
                 </ul>
 
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                     @auth
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('panel.index') }}">Panel</a>
+                            <a class="nav-link btn-ingresar px-3" href="{{ route('panel.index') }}">Panel</a>
                         </li>
                     @else
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">Ingresar</a>
+                            <a class="nav-link btn-ingresar px-3" href="{{ route('login') }}">Ingresar</a>
                         </li>
                     @endauth
                 </ul>
@@ -51,19 +51,15 @@
         @yield('content')
     </main>
 
-    <footer class="border-top bg-white py-4 mt-auto">
-        <div class="container">
-            <div class="row g-2 align-items-center">
-                <div class="col-md text-center text-md-start">
-                    <p class="mb-0 fw-semibold">Semana de Sistemas 2026</p>
-                    <p class="mb-0 text-muted small">
-                        Universidad de El Salvador &middot; Facultad Multidisciplinaria Oriental
-                    </p>
-                </div>
-                <div class="col-md text-center text-md-end text-muted small">
-                    Proyecto de Técnicas de Programación para Internet
-                </div>
-            </div>
+    <footer class="footer-sds py-4 mt-auto">
+        <div class="container text-center">
+            <p class="mb-1 footer-title">Semana de Sistemas 2026</p>
+            <p class="mb-1 footer-subtitle small">
+                Universidad de El Salvador &middot; Facultad Multidisciplinaria Oriental
+            </p>
+            <p class="mb-0 footer-accent small">
+                Proyecto de Técnicas de Programación para Internet
+            </p>
         </div>
     </footer>
 </body>

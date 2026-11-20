@@ -5,12 +5,18 @@
 @section('content')
     <div class="row justify-content-center">
         <div class="col-md-7 col-lg-5">
-            <div class="card shadow-sm">
+            <div class="card card-sds-empty shadow-sm">
                 <div class="card-body p-4">
-                    <h1 class="h4 mb-2">Ingresar al panel</h1>
+                    <h1 class="h4 fw-bold mb-2">Ingresar al panel</h1>
                     <p class="text-muted small mb-4">
                         Solo los integrantes del equipo pueden administrar el blog.
                     </p>
+
+                    @if (session('status'))
+                        <div class="alert alert-success small fw-semibold" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
 
                     @if ($errors->any())
                         <div class="alert alert-danger" role="alert">
@@ -26,7 +32,7 @@
                         @csrf
 
                         <div class="mb-3">
-                            <label for="email" class="form-label">Correo</label>
+                            <label for="email" class="form-label fw-semibold">Correo</label>
                             <input id="email" type="email" name="email" value="{{ old('email') }}"
                                    class="form-control @error('email') is-invalid @enderror"
                                    required autofocus autocomplete="username">
@@ -36,7 +42,12 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="password" class="form-label">Contraseña</label>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <label for="password" class="form-label fw-semibold mb-1">Contraseña</label>
+                                <a href="{{ route('password.request') }}" class="small fw-semibold text-success text-decoration-none">
+                                    ¿Olvidaste tu contraseña?
+                                </a>
+                            </div>
                             <input id="password" type="password" name="password"
                                    class="form-control @error('password') is-invalid @enderror"
                                    required autocomplete="current-password">
@@ -51,13 +62,13 @@
                             <label class="form-check-label" for="remember">Mantener la sesión abierta</label>
                         </div>
 
-                        <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                        <button type="submit" class="btn btn-sds-green w-100 py-2">Entrar</button>
                     </form>
                 </div>
             </div>
 
             <p class="text-center text-muted small mt-3">
-                <a href="{{ route('home') }}">Volver al inicio</a>
+                <a href="{{ route('home') }}" class="fw-semibold text-success text-decoration-none">Volver al inicio</a>
             </p>
         </div>
     </div>
