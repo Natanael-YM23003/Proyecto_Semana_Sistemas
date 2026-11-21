@@ -67,7 +67,7 @@ class BlogController extends Controller
     {
         abort_unless($post->status === 'published', 404);
 
-        $post->load(['category', 'authors', 'images']);
+        $post->load(['category', 'authors', 'images', 'evidences']);
 
         $related = Post::published()
             ->with(['category', 'authors'])

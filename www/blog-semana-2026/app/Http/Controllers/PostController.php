@@ -107,7 +107,7 @@ class PostController extends Controller
         $post->delete();
 
         return redirect()
-            ->route('posts.index')
+            ->back()
             ->with('status', 'Entrada eliminada correctamente.');
     }
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -15,6 +16,38 @@ use Illuminate\View\View;
 
 class AuthController extends Controller
 {
+    public function showRegister(): View
+    {
+        return view('auth.register');
+    }
+
+    public function register(Request $request): RedirectResponse
+    {
+        $validated = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
+            'password' => ['required', 'confirmed', PasswordRule::defaults()],
+        ], [], [
+            'name' => 'nombre',
+            'email' => 'correo',
+            'password' => 'contraseña',
+        ]);
+
+        $user = User::create([
+            'name' => $validated['name'],
+            'email' => $validated['email'],
+            'password' => Hash::make($validated['password']),
+        ]);
+
+        Auth::login($user);
+
+        $request->session()->regenerate();
+
+        return redirect()
+            ->intended(route('panel.index'))
+            ->with('status', '¡Tu cuenta ha sido creada exitosamente! Bienvenido, '.$user->name.'.');
+    }
+
     public function showLogin(): View
     {
         return view('auth.login');

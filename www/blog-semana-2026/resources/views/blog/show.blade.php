@@ -94,6 +94,31 @@
                     </section>
                 @endif
 
+                @if ($post->evidences->isNotEmpty())
+                    <section class="card border-0 shadow-sm mt-4">
+                        <div class="card-body p-4">
+                            <h2 class="h5 mb-3">Evidencias fotográficas</h2>
+                            <div class="row g-3">
+                                @foreach ($post->evidences as $evidence)
+                                    <div class="col-6 col-md-4">
+                                        <a href="{{ $evidence->imageUrl() }}" target="_blank" rel="noopener">
+                                            <img src="{{ $evidence->imageUrl() }}"
+                                                 alt="{{ $evidence->title }}"
+                                                 class="img-fluid rounded"
+                                                 style="width: 100%; height: 140px; object-fit: cover;"
+                                                 loading="lazy">
+                                        </a>
+                                        <span class="badge text-bg-secondary mt-1 small">{{ $evidence->event_reference }}</span>
+                                        <p class="small text-muted mt-1 mb-0 text-truncate" title="{{ $evidence->title }}">
+                                            {{ $evidence->title }}
+                                        </p>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </section>
+                @endif
+
                 @if ($related->isNotEmpty())
                     <section class="mt-5">
                         <h2 class="h4 mb-3">Más de {{ $post->category?->name ?? 'la semana' }}</h2>

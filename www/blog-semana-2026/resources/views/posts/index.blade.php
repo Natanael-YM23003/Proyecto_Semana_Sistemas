@@ -8,7 +8,15 @@
             <h1 class="h3 mb-1">Entradas</h1>
             <p class="text-muted mb-0">Publicaciones del blog.</p>
         </div>
-        <a href="{{ route('posts.create') }}" class="btn btn-primary">Nueva entrada</a>
+        <div class="d-flex gap-2">
+            <a href="{{ route('panel.index') }}" class="btn btn-outline-dark">
+                CRUD Unificado
+            </a>
+            <a href="{{ route('evidences.index') }}" class="btn btn-outline-success">
+                Evidencias
+            </a>
+            <a href="{{ route('posts.create') }}" class="btn btn-primary">Nueva entrada</a>
+        </div>
     </div>
 
     @if ($posts->isEmpty())

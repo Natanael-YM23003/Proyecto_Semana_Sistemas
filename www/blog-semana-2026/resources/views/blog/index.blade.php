@@ -7,7 +7,12 @@
         <div class="container">
             <div class="row align-items-end g-3">
                 <div class="col-lg-7">
-                    <h1 class="h2 mb-1">Entradas</h1>
+                    <div class="d-flex align-items-center gap-3">
+                        <h1 class="h2 mb-1">Entradas</h1>
+                        <a href="{{ route('evidences.index') }}" class="btn btn-sm btn-outline-success">
+                            Evidencias
+                        </a>
+                    </div>
                     <p class="text-muted mb-0">Experiencias de las actividades de la semana.</p>
                 </div>
                 <div class="col-lg-5">

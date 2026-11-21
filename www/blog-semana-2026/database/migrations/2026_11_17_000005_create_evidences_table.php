@@ -10,15 +10,14 @@ return new class extends Migration
     {
         Schema::create('evidences', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('post_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('user_id')->constrained()->restrictOnDelete();
+            $table->string('title', 255)->default('Evidencia');
+            $table->string('event_reference', 255)->nullable();
+            $table->foreignId('post_id')->nullable()->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->nullable()->constrained()->restrictOnDelete();
             $table->string('path', 255);
-            $table->string('description', 255)->nullable();
+            $table->text('description')->nullable();
             $table->date('taken_at')->nullable();
             $table->timestamps();
-
-            // Una evidencia por integrante y actividad.
-            $table->unique(['post_id', 'user_id']);
         });
     }
 

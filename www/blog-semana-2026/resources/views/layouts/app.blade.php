@@ -29,8 +29,8 @@
                 <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
                     @auth
                         <li class="nav-item">
-                            <a class="nav-link @if (request()->routeIs('panel.*')) active @endif"
-                               href="{{ route('panel.index') }}">Panel</a>
+                            <a class="nav-link @if (request()->routeIs('panel.*') || request()->routeIs('crud.*')) active @endif"
+                               href="{{ route('panel.index') }}">Panel / CRUD</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link @if (request()->routeIs('posts.*')) active @endif"
@@ -41,6 +41,10 @@
                                href="{{ route('categories.index') }}">Categorías</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link @if (request()->routeIs('evidences.*')) active @endif"
+                               href="{{ route('evidences.index') }}">Evidencias</a>
+                        </li>
+                        <li class="nav-item">
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <button type="submit" class="btn btn-ingresar btn-sm my-2 my-lg-0 ms-lg-2">
@@ -49,6 +53,10 @@
                             </form>
                         </li>
                     @else
+                        <li class="nav-item">
+                            <a class="nav-link @if (request()->routeIs('register')) active @endif"
+                               href="{{ route('register') }}">Registrarse</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link btn-ingresar px-3" href="{{ route('login') }}">Ingresar</a>
                         </li>

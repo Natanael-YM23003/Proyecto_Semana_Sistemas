@@ -64,6 +64,13 @@
 
                         <button type="submit" class="btn btn-sds-green w-100 py-2">Entrar</button>
                     </form>
+
+                    <div class="text-center mt-3 pt-3 border-top">
+                        <span class="text-muted small">¿No tienes una cuenta?</span>
+                        <a href="{{ route('register') }}" class="small fw-semibold text-success text-decoration-none ms-1">
+                            Regístrate
+                        </a>
+                    </div>
                 </div>
             </div>
 

@@ -30,14 +30,22 @@
                         <a class="nav-link @if (request()->routeIs('blog.*')) active @endif"
                            href="{{ route('blog.index') }}">Entradas</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link @if (request()->routeIs('evidences.*')) active @endif"
+                           href="{{ route('evidences.index') }}">Evidencias</a>
+                    </li>
                 </ul>
 
-                <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2 mt-2 mt-lg-0">
                     @auth
                         <li class="nav-item">
                             <a class="nav-link btn-ingresar px-3" href="{{ route('panel.index') }}">Panel</a>
                         </li>
                     @else
+                        <li class="nav-item">
+                            <a class="nav-link @if (request()->routeIs('register')) active @endif"
+                               href="{{ route('register') }}">Registrarse</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link btn-ingresar px-3" href="{{ route('login') }}">Ingresar</a>
                         </li>
