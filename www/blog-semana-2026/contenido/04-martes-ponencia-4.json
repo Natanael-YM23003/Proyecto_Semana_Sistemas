@@ -1,0 +1,21 @@
+{
+    "entradas": [
+        {
+            "slug": "ponencia-4-victoria-rivas-edwin-umana",
+            "titulo": "Ciberseguridad: protegiendo la información en el mundo digital",
+            "categoria": "Ponencias",
+            "fecha": "2026-11-17",
+            "estado": "publicada",
+            "resumen": "Victoria Rivas y Edwin Umaña hablaron de ciberseguridad: los riesgos del mundo digital y por qué proteger la información es clave para cualquier ingeniero de sistemas.",
+            "expositor": "Victoria Rivas y Edwin Umaña",
+            "desarrollo": "El martes 17 de noviembre, de 10:00 a. m. a 12:00 m. d., Victoria Rivas y Edwin Umaña presentaron la cuarta ponencia de la semana en el Auditorio 1 de la FMO-UES.\n\nLa ponencia trató sobre ciberseguridad y la importancia de proteger la información en un mundo cada vez más conectado. Los ponentes explicaron que los ataques informáticos ya no afectan solo a grandes empresas, sino también a instituciones, pequeños negocios y usuarios comunes, y que muchas veces el punto más débil no es la tecnología, sino las personas. Hablaron de las amenazas más frecuentes, como el phishing, el robo de contraseñas, el malware, el ransomware y la ingeniería social, y mostraron cómo los atacantes aprovechan los descuidos cotidianos para acceder a cuentas y sistemas.\n\nEntre las ideas centrales destacaron la importancia de usar contraseñas seguras y la autenticación en dos pasos, mantener los sistemas actualizados, desconfiar de enlaces y correos sospechosos y hacer respaldos periódicos de la información. También insistieron en que, como futuros ingenieros de sistemas, debemos pensar en la seguridad desde el diseño de cada proyecto y no como algo que se agrega al final. Por último, presentaron la ciberseguridad como un campo profesional con mucha demanda y animaron a los estudiantes a especializarse en él.",
+            "aprendizajes": "De esta ponencia aprendimos que la ciberseguridad es responsabilidad de todos y no solo de los especialistas. Entendimos que la mayoría de los ataques no empiezan con técnicas complejas, sino con errores humanos como hacer clic en un enlace falso, reutilizar contraseñas o compartir información sin verificar con quién. Aprendimos a reconocer señales de phishing y de ingeniería social, y por qué conviene activar la autenticación en dos pasos y usar un gestor de contraseñas. Desde el punto de vista técnico, comprendimos que la seguridad debe estar presente desde el diseño de cualquier sistema: validar las entradas de los usuarios, proteger los datos sensibles, controlar los permisos y mantener actualizadas las dependencias. También descubrimos que la ciberseguridad es un área profesional amplia y con mucha demanda, una opción de especialización que vale la pena considerar en nuestra carrera.",
+            "reflexion": "La ponencia nos pareció muy interesante y útil, porque trató un tema que nos afecta a todos en el día a día, no solo como estudiantes de sistemas sino como usuarios de internet. Los ejemplos que dieron hicieron que la charla fuera fácil de seguir y nos hicieron reflexionar sobre nuestros propios hábitos digitales, como las contraseñas que usamos o los enlaces que abrimos sin pensarlo dos veces. También nos gustó que mostraran la ciberseguridad como un campo con muchas oportunidades, porque nos abrió el panorama sobre posibles áreas de especialización. Salimos con la idea de mejorar la seguridad de nuestras cuentas y de tener más en cuenta la protección de los datos en los proyectos que desarrollemos.",
+            "autores": [
+                "ml23011@ues.edu.sv"
+            ],
+            "portada": null,
+            "galeria": []
+        }
+    ]
+}

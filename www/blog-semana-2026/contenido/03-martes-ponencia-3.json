@@ -1,0 +1,21 @@
+{
+    "entradas": [
+        {
+            "slug": "ponencia-eficiencia-energetica-soluciones-tecnologicas",
+            "titulo": "Eficiencia energética, optimización de recursos y sostenibilidad aplicada a soluciones tecnológicas",
+            "categoria": "Ponencias",
+            "fecha": "2026-11-17",
+            "estado": "publicada",
+            "resumen": "El Lic. Nahum Alexander Sánchez Cruz explicó cómo aplicar la eficiencia energética y la sostenibilidad al crear soluciones tecnológicas, y el papel de los ingenieros de sistemas en reducir su impacto.",
+            "expositor": "Lic. Nahum Alexander Sánchez Cruz",
+            "desarrollo": "El martes 17 de noviembre, de 8:00 a. m. a 10:00 a. m., el Lic. Nahum Alexander Sánchez Cruz presentó la ponencia \"Eficiencia energética, optimización de recursos y sostenibilidad aplicada a soluciones tecnológicas\" en el Auditorio 1 de la FMO-UES.\n\nLa ponencia abordó cómo la tecnología puede ser parte de la solución, y no del problema, frente al consumo excesivo de energía y recursos. El ponente explicó que todo sistema informático tiene un costo energético, desde los centros de datos y servidores hasta las computadoras y los dispositivos móviles, y que ese consumo crece cada año con la expansión de los servicios digitales. Habló de conceptos como la eficiencia energética, el uso responsable del hardware, la virtualización y la computación en la nube como alternativas para aprovechar mejor la infraestructura, y de la importancia de alargar la vida útil de los equipos para reducir los residuos electrónicos.\n\nTambién dio ejemplos de soluciones tecnológicas aplicadas a la sostenibilidad, como los sistemas de monitoreo del consumo eléctrico, la automatización del encendido y apagado de equipos e iluminación, y el uso de datos para detectar desperdicios de energía en edificios e instituciones. Entre las ideas centrales destacó que la sostenibilidad debe considerarse desde el diseño de cada solución, que un software bien optimizado también ahorra energía y que los ingenieros de sistemas tienen un papel clave para que la transformación digital vaya de la mano con el cuidado del medio ambiente.",
+            "aprendizajes": "Aprendimos que optimizar recursos no es solo una cuestión de ahorro económico, sino también de responsabilidad ambiental. Entendimos que cada decisión técnica tiene un impacto: un código ineficiente, consultas a la base de datos mal diseñadas o servidores encendidos sin necesidad se traducen en un mayor consumo de energía. Aprendimos que se pueden aplicar buenas prácticas desde el desarrollo, como escribir algoritmos más eficientes, usar caché para evitar procesos repetidos, comprimir imágenes y archivos, y elegir la infraestructura adecuada según la demanda real del sistema, en lugar de sobredimensionarla. También comprendimos el valor de la virtualización y de la nube para compartir recursos y escalar solo cuando hace falta, y la importancia de medir el consumo para saber dónde mejorar. Por último, nos quedó claro que alargar la vida útil de los equipos y reutilizar hardware también forma parte de un proyecto tecnológico sostenible.",
+            "reflexion": "La ponencia nos pareció muy valiosa, porque nos hizo ver nuestra carrera desde un ángulo que pocas veces consideramos: el impacto ambiental de la tecnología que creamos y usamos todos los días. Nos gustó que relacionara conceptos de sostenibilidad con decisiones técnicas concretas, lo que la hizo práctica y fácil de aplicar. Nos sirve porque, a partir de ahora, podemos tomar en cuenta la eficiencia al desarrollar nuestros proyectos, desde cómo escribimos el código y diseñamos las bases de datos hasta cómo elegimos dónde y cómo desplegar un sistema. También complementó muy bien las ponencias del lunes y el taller de Electricity Maps, porque juntas nos dieron una visión completa del enfoque Green IoT de la Semana de Sistemas. Nos quedamos con la idea de que un buen ingeniero de sistemas no solo hace que las cosas funcionen, sino que funcionen de manera eficiente y responsable.",
+            "autores": [
+                "ym23003@ues.edu.sv"
+            ],
+            "portada": null,
+            "galeria": []
+        }
+    ]
+}

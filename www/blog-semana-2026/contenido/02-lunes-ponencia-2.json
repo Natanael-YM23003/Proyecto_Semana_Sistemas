@@ -1,0 +1,23 @@
+{
+    "entradas": [
+        {
+            "slug": "ponencia-energias-alternativas",
+            "titulo": "Energías alternativas y eficiencia energética",
+            "categoria": "Ponencias",
+            "fecha": "2026-11-16",
+            "estado": "publicada",
+            "resumen": "El Dr. Carlos Osmín Pocasangre Jiménez habló de las fuentes de energía limpia, de cómo aprovechar mejor la electricidad y del papel de la tecnología en un modelo energético más sostenible.",
+            "expositor": "Dr. Carlos Osmín Pocasangre Jiménez",
+            "desarrollo": "El lunes 16 de noviembre, de 1:00 p. m. a 3:00 p. m., el Dr. Carlos Osmín Pocasangre Jiménez presentó la ponencia \"Energías alternativas y eficiencia energética\" en el Auditorio 1 de la FMO-UES.\n\nEl ponente comenzó explicando por qué es necesario reducir la dependencia de los combustibles fósiles, tanto por su impacto ambiental como por su costo y su disponibilidad limitada. Luego repasó las principales fuentes de energía alternativa, como la solar, la eólica, la hidroeléctrica, la geotérmica y la biomasa, y explicó en qué consiste cada una, sus ventajas y sus limitaciones. Destacó que cada país debe aprovechar los recursos que tiene a su alcance y que regiones como Centroamérica cuentan con un gran potencial en fuentes renovables.\n\nEn la segunda parte habló de la eficiencia energética, entendida como la capacidad de obtener el mismo resultado consumiendo menos energía. Mostró ejemplos de cómo reducir el consumo en hogares, oficinas e industrias mediante equipos más eficientes, iluminación LED, buenos hábitos de uso y sistemas de monitoreo que permiten detectar desperdicios. Entre las ideas centrales destacó que la energía más limpia es la que no se consume y que la tecnología, a través de sensores, automatización y análisis de datos, es una aliada clave para producir y usar la energía de forma más inteligente.",
+            "aprendizajes": "Aprendimos a diferenciar las principales fuentes de energía alternativa y a reconocer que ninguna es perfecta: cada una depende de condiciones como el clima, la ubicación o el costo de instalación. Entendimos que la transición energética no consiste solo en generar energía limpia, sino también en consumir menos y mejor, y que ahí la eficiencia energética tiene un papel tan importante como las renovables. También comprendimos cómo la tecnología puede apoyar este cambio: los sistemas de monitoreo, los sensores y la automatización permiten medir el consumo, encontrar desperdicios y tomar decisiones basadas en datos. Esto conecta directamente con el enfoque Green IoT de la semana y con lo que podemos desarrollar como ingenieros de sistemas.",
+            "reflexion": "La ponencia nos pareció muy clara y bien estructurada, porque explicó un tema técnico de forma accesible y lo relacionó con situaciones cotidianas. Nos gustó que complementara la ponencia de la mañana: si el IoT nos ayuda a medir y controlar, las energías alternativas y la eficiencia energética nos dicen qué debemos mejorar. Nos sirve porque nos dio ideas para proyectos que monitoreen el consumo eléctrico o que integren fuentes renovables, y nos hizo más conscientes de la energía que usamos en nuestro día a día. Nos quedamos con la idea de que cuidar la energía también es una responsabilidad profesional.",
+            "autores": [
+
+                "bl23012@ues.edu.sv"
+
+            ],
+            "portada": null,
+            "galeria": []
+        }
+    ]
+}
