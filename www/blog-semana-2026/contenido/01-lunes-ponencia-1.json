@@ -1,0 +1,21 @@
+{
+    "entradas": [
+        {
+            "slug": "ponencia-iot-agroindustria",
+            "titulo": "Investigación aplicada en IoT para la agroindustria en El Salvador",
+            "categoria": "Ponencias",
+            "fecha": "2026-11-16",
+            "estado": "publicada",
+            "resumen": "El Mtro. Omar Otoniel Flores Cortez abrió las ponencias con una charla sobre cómo el IoT, con sensores y análisis de datos, puede ayudar a la agroindustria salvadoreña a monitorear cultivos y optimizar recursos.",
+            "expositor": "Mtro. Omar Otoniel Flores Cortez",
+            "desarrollo": "El lunes 16 de noviembre, de 10:00 a. m. a 12:00 m. d., el Mtro. Omar Otoniel Flores Cortez presentó la ponencia \"Investigación aplicada en IoT para la agroindustria en El Salvador\" en el Auditorio 1 de la FMO-UES.\n\nEl ponente explicó cómo el Internet de las Cosas puede transformar la agroindustria salvadoreña, un sector clave para la economía del país que todavía depende mucho de métodos tradicionales. Habló de redes de sensores que miden en tiempo real variables como la humedad del suelo, la temperatura, la humedad ambiental y la luz, y de cómo esos datos se envían por conexiones inalámbricas a plataformas donde pueden visualizarse y analizarse. A partir de esa información, los productores pueden tomar mejores decisiones: regar solo cuando el cultivo lo necesita, detectar a tiempo condiciones que favorecen plagas o enfermedades y aprovechar mejor recursos como el agua y la energía.\n\nUna de las ideas centrales fue que la investigación aplicada debe partir de problemas reales del entorno y que las universidades tienen un papel importante para acercar estas tecnologías a los agricultores. También destacó que muchas de estas soluciones pueden construirse con componentes accesibles, como microcontroladores y sensores de bajo costo, lo que las hace viables para el contexto salvadoreño.",
+            "aprendizajes": "Aprendimos que el IoT no es una tecnología lejana ni exclusiva de países desarrollados, sino una herramienta que puede aplicarse directamente a los problemas del campo salvadoreño. Entendimos cómo funciona un sistema IoT completo: los sensores capturan datos del entorno, un microcontrolador los procesa y los envía por una red inalámbrica, y una plataforma los almacena y los muestra para tomar decisiones. Vimos que monitorear variables como la humedad del suelo o la temperatura permite ahorrar agua, reducir pérdidas en las cosechas y anticiparse a problemas como plagas o sequías. También aprendimos que estos proyectos deben adaptarse a las condiciones reales del país, como la conectividad limitada en zonas rurales, el costo de los equipos y la capacitación de los agricultores. Por eso es importante diseñar soluciones sencillas, económicas y fáciles de usar. Por último, comprendimos que como ingenieros de sistemas podemos aportar mucho al sector agrícola, uniendo la programación, la electrónica y el análisis de datos para mejorar la productividad y la sostenibilidad.",
+            "reflexion": "La ponencia nos pareció una excelente forma de abrir la Semana de Sistemas, porque conectó la tecnología con una realidad muy cercana a nosotros: el campo salvadoreño. Nos gustó que no se quedara en la teoría, sino que mostrara cómo la investigación aplicada puede resolver problemas concretos de productores locales. Nos sirve porque nos abrió una nueva perspectiva sobre dónde podemos aplicar lo que aprendemos en la carrera, más allá del desarrollo de software tradicional. Nos dio ideas para futuros proyectos de cátedra o de graduación relacionados con el IoT y la agricultura, y nos motivó a aprender más sobre microcontroladores, sensores y análisis de datos. También nos recordó que, como futuros ingenieros, podemos contribuir al desarrollo del país con soluciones tecnológicas que tengan un impacto real en la vida de las personas.",
+            "autores": [
+                "ym23003@ues.edu.sv"
+            ],
+            "portada": null,
+            "galeria": []
+        }
+    ]
+}
