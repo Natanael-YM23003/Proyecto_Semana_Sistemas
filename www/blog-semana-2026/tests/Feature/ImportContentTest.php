@@ -228,7 +228,7 @@ class ImportContentTest extends TestCase
         $this->assertSame(0, Post::count());
     }
 
-    public function test_la_galeria_se_reemplaza_al_volver_a_importar(): void
+    public function test_la_galeria_no_se_borra_al_volver_a_importar(): void
     {
         $this->usuarios();
         $this->categorias();
@@ -240,10 +240,39 @@ class ImportContentTest extends TestCase
         $post = Post::firstOrFail();
         $this->assertSame(2, $post->images()->count());
 
+        // Volver a importar el mismo JSON no duplica ni borra nada.
+        $this->artisan('contenido:importar', ['archivo' => $ruta])->assertSuccessful();
+
+        $this->assertSame(2, $post->images()->count());
+        Storage::disk('public')->assertExists('posts/gallery/ponencias-dia-1-1.png');
+        Storage::disk('public')->assertExists('posts/gallery/ponencias-dia-1-2.png');
+
+        // Un JSON con la galería vacía tampoco borra las fotos existentes.
         $ruta = $this->archivo([$this->entrada(['galeria' => []])]);
         $this->artisan('contenido:importar', ['archivo' => $ruta])->assertSuccessful();
 
-        $this->assertSame(0, $post->images()->count());
-        Storage::disk('public')->assertMissing('posts/gallery/ponencias-dia-1-1.png');
+        $this->assertSame(2, $post->images()->count());
+        Storage::disk('public')->assertExists('posts/gallery/ponencias-dia-1-1.png');
+    }
+
+    public function test_la_portada_no_se_borra_si_el_json_la_deja_en_null(): void
+    {
+        $this->usuarios();
+        $this->categorias();
+        $this->imagenes();
+
+        $ruta = $this->archivo([$this->entrada()]);
+        $this->artisan('contenido:importar', ['archivo' => $ruta])->assertSuccessful();
+
+        $post = Post::firstOrFail();
+        $this->assertSame('posts/covers/ponencias-dia-1.png', $post->cover_image);
+
+        $ruta = $this->archivo([$this->entrada(['portada' => null])]);
+        $this->artisan('contenido:importar', ['archivo' => $ruta])->assertSuccessful();
+
+        $post->refresh();
+
+        $this->assertSame('posts/covers/ponencias-dia-1.png', $post->cover_image);
+        Storage::disk('public')->assertExists('posts/covers/ponencias-dia-1.png');
     }
 }

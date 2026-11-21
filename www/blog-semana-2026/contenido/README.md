@@ -67,11 +67,14 @@ En `desarrollo` va la parte descriptiva. En `aprendizajes` y `reflexion` va lo q
 - Máximo 4 MB por imagen.
 - Para la portada usa `"portada": "imagenes/portada-dia1.jpg"`.
 - Para la galería usa `"galeria": ["imagenes/foto1.jpg", "imagenes/foto2.jpg"]`.
-- Si dejas `"portada": null`, la entrada se muestra sin portada.
-- Si dejas `"galeria": []`, se borran las imágenes de galería de esa entrada al volver a importar.
+- Si dejas `"portada": null`, la entrada conserva la portada que ya tenga.
+- Si dejas `"galeria": []`, la galería actual se conserva.
+- El importador nunca borra fotos. Solo agrega las que lista el JSON.
 
 ## Volver a importar
 
 El `slug` es la clave: si vuelves a correr el comando con el mismo `slug`, la entrada se actualiza en vez de duplicarse. Puedes corregir el texto y volver a importar sin miedo.
 
-La galería se reemplaza con lo que diga el JSON. La portada también, si la clave `portada` está presente.
+El importador además nunca borra fotos. Si una entrada ya tiene portada o galería, subida desde el panel o de una importación anterior, se queda como está. Solo se agregan las fotos nuevas que liste el JSON.
+
+Para quitar una foto de una entrada, se hace desde el panel de administración, no desde el JSON.

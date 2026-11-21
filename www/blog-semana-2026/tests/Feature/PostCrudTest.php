@@ -196,6 +196,7 @@ class PostCrudTest extends TestCase
         $ruta = $post->cover_image;
 
         $this->actingAs($autor)
+            ->from('/posts')
             ->delete("/posts/{$post->slug}")
             ->assertRedirect('/posts');
 

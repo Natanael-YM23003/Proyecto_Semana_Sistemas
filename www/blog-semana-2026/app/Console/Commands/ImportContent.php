@@ -256,12 +256,9 @@ class ImportContent extends Command
         string $archivo,
         int $numero,
     ): void {
+        // Sin portada en el JSON se respeta la que ya tenga la entrada.
+        // Antes se borraba, y eso eliminaba fotos subidas desde el panel.
         if ($ruta === null || $ruta === '') {
-            if ($post->cover_image) {
-                Storage::disk('public')->delete($post->cover_image);
-                $post->forceFill(['cover_image' => null])->save();
-            }
-
             return;
         }
 
@@ -285,15 +282,17 @@ class ImportContent extends Command
     ): void {
         $post->load('images');
 
-        // El JSON es la fuente de la galería de esta entrada.
-        foreach ($post->images as $imagen) {
-            Storage::disk('public')->delete($imagen->path);
-            $imagen->delete();
-        }
+        // Solo se agregan fotos nuevas. Las que ya tiene la entrada no se
+        // tocan, sean del panel o de una importación anterior.
+        $existentes = $post->images->keyBy('path');
 
         foreach (array_values($rutas) as $i => $ruta) {
             $origen = $this->imagenLocal($ruta, $carpetaBase, $archivo, $numero);
             $destino = "posts/gallery/{$post->slug}-".($i + 1).'.'.strtolower($origen->getExtension());
+
+            if ($existentes->has($destino)) {
+                continue;
+            }
 
             Storage::disk('public')->put($destino, File::get($origen->getPathname()));
 

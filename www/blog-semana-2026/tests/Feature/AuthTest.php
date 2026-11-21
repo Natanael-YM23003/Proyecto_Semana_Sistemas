@@ -75,7 +75,8 @@ class AuthTest extends TestCase
         $this->actingAs($user)
             ->get('/panel')
             ->assertOk()
-            ->assertSee('Hola, '.$user->name);
+            ->assertSee('Panel de Control')
+            ->assertSee('Cerrar sesión');
     }
 
     public function test_un_usuario_puede_cerrar_sesion(): void

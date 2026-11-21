@@ -153,6 +153,7 @@ class EvidenceTest extends TestCase
         Storage::disk('public')->assertExists($path);
 
         $response = $this->actingAs($user)
+            ->from('/evidencias')
             ->delete('/evidencias/'.$evidence->id);
 
         $response->assertRedirect('/evidencias');

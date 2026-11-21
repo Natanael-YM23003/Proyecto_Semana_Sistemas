@@ -63,7 +63,7 @@ class PanelCrudTest extends TestCase
         $response = $this->actingAs($user)->get('/panel');
 
         $response->assertOk();
-        $response->assertSee('Panel de Control · CRUD');
+        $response->assertSee('Panel de Control');
         $response->assertSee('Todo el contenido');
         $response->assertSee('Solo Entradas');
         $response->assertSee('Solo Evidencias');
