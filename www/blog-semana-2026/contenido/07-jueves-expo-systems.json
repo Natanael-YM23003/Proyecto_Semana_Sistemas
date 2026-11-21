@@ -14,8 +14,12 @@
             "autores": [
                 "ym23003@ues.edu.sv"
             ],
-            "portada": null,
-            "galeria": []
+            "portada": "imagenes/expo-systems-portada.jpg",
+            "galeria": [
+                "imagenes/expo-systems-1.jpg",
+                "imagenes/expo-systems-2.jpg",
+                "imagenes/expo-systems-3.jpg"
+            ]
         }
     ]
 }

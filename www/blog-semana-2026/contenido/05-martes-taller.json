@@ -14,8 +14,13 @@
             "autores": [
                 "ml23011@ues.edu.sv"
             ],
-            "portada": null,
-            "galeria": []
+            "portada": "imagenes/taller-electricity-maps-portada.jpg",
+            "galeria": [
+                "imagenes/taller-electricity-maps-1.jpg",
+                "imagenes/taller-electricity-maps-2.jpg",
+                "imagenes/taller-electricity-maps-3.jpg",
+                "imagenes/taller-electricity-maps-4.jpg"
+            ]
         }
     ]
 }

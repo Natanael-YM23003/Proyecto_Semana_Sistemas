@@ -13,9 +13,12 @@
             "reflexion": "Como equipo vivimos el bingo como auténticos \"ludópatas\" de la Semana de Sistemas, en el mejor sentido de la broma. Desde la primera ronda nos aferramos a nuestros cartones como si nos fuera la vida en ello: atentos a cada número, marcando a toda velocidad y celebrando cada acierto como si ya tuviéramos el premio en la mano. Cuando nos faltaba un solo número, la tensión se sentía en todo el grupo, y cuando alguien más gritaba \"¡bingo!\", la frustración duraba exactamente hasta que empezaba la siguiente ronda y volvíamos a jurar que esa sí era la nuestra. Más de una vez estuvimos tentados a comprar \"solo un crédito más\". Al final no ganamos ningún premio, pero salimos del auditorio riéndonos de lo metidos que estuvimos en el juego y con la sensación de haber vivido una de las mañanas más divertidas de la semana.",
             "autores": [
                 "bl23012@ues.edu.sv"
-                     ],
-            "portada": null,
-            "galeria": []
+            ],
+            "portada": "imagenes/gran-bingo-portada.jpg",
+            "galeria": [
+                "imagenes/gran-bingo-1.jpg",
+                "imagenes/gran-bingo-2.jpg"
+            ]
         }
     ]
 }

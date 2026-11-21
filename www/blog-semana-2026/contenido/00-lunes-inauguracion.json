@@ -14,8 +14,12 @@
             "autores": [
                 "ml23011@ues.edu.sv"
             ],
-            "portada": null,
-            "galeria": []
+            "portada": "imagenes/inauguracion-semana-de-sistemas-2026-portada.jpg",
+            "galeria": [
+                "imagenes/inauguracion-semana-de-sistemas-2026-1.jpg",
+                "imagenes/inauguracion-semana-de-sistemas-2026-2.jpg",
+                "imagenes/inauguracion-semana-de-sistemas-2026-3.jpg"
+            ]
         }
     ]
 }

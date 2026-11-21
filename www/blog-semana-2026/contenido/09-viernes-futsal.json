@@ -14,8 +14,14 @@
             "autores": [
                 "bl23012@ues.edu.sv"
             ],
-            "portada": null,
-            "galeria": []
+            "portada": "imagenes/torneo-futsal-portada.jpg",
+            "galeria": [
+                "imagenes/torneo-futsal-1.jpg",
+                "imagenes/torneo-futsal-2.jpg",
+                "imagenes/torneo-futsal-3.jpg",
+                "imagenes/torneo-futsal-4.jpg",
+                "imagenes/torneo-futsal-5.jpg"
+            ]
         }
     ]
 }

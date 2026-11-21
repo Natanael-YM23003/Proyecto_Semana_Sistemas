@@ -14,8 +14,15 @@
             "autores": [
                 "ym23003@ues.edu.sv"
             ],
-            "portada": null,
-            "galeria": []
+            "portada": "imagenes/ponencia-eficiencia-energetica-soluciones-tecnologicas-portada.jpg",
+            "galeria": [
+                "imagenes/ponencia-eficiencia-energetica-soluciones-tecnologicas-1.jpg",
+                "imagenes/ponencia-eficiencia-energetica-soluciones-tecnologicas-2.jpg",
+                "imagenes/ponencia-eficiencia-energetica-soluciones-tecnologicas-3.jpg",
+                "imagenes/ponencia-eficiencia-energetica-soluciones-tecnologicas-4.jpg",
+                "imagenes/ponencia-eficiencia-energetica-soluciones-tecnologicas-5.jpg",
+                "imagenes/ponencia-eficiencia-energetica-soluciones-tecnologicas-6.jpg"
+            ]
         }
     ]
 }

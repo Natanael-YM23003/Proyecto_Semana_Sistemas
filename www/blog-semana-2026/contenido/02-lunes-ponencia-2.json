@@ -12,12 +12,17 @@
             "aprendizajes": "Aprendimos a diferenciar las principales fuentes de energía alternativa y a reconocer que ninguna es perfecta: cada una depende de condiciones como el clima, la ubicación o el costo de instalación. Entendimos que la transición energética no consiste solo en generar energía limpia, sino también en consumir menos y mejor, y que ahí la eficiencia energética tiene un papel tan importante como las renovables. También comprendimos cómo la tecnología puede apoyar este cambio: los sistemas de monitoreo, los sensores y la automatización permiten medir el consumo, encontrar desperdicios y tomar decisiones basadas en datos. Esto conecta directamente con el enfoque Green IoT de la semana y con lo que podemos desarrollar como ingenieros de sistemas.",
             "reflexion": "La ponencia nos pareció muy clara y bien estructurada, porque explicó un tema técnico de forma accesible y lo relacionó con situaciones cotidianas. Nos gustó que complementara la ponencia de la mañana: si el IoT nos ayuda a medir y controlar, las energías alternativas y la eficiencia energética nos dicen qué debemos mejorar. Nos sirve porque nos dio ideas para proyectos que monitoreen el consumo eléctrico o que integren fuentes renovables, y nos hizo más conscientes de la energía que usamos en nuestro día a día. Nos quedamos con la idea de que cuidar la energía también es una responsabilidad profesional.",
             "autores": [
-
                 "bl23012@ues.edu.sv"
-
             ],
-            "portada": null,
-            "galeria": []
+            "portada": "imagenes/ponencia-energias-alternativas-portada.jpg",
+            "galeria": [
+                "imagenes/ponencia-energias-alternativas-1.jpg",
+                "imagenes/ponencia-energias-alternativas-2.jpg",
+                "imagenes/ponencia-energias-alternativas-3.jpg",
+                "imagenes/ponencia-energias-alternativas-4.jpg",
+                "imagenes/ponencia-energias-alternativas-5.jpg",
+                "imagenes/ponencia-energias-alternativas-6.jpg"
+            ]
         }
     ]
 }

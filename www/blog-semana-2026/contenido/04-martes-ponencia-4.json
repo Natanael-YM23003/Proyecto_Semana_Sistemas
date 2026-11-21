@@ -14,8 +14,15 @@
             "autores": [
                 "ml23011@ues.edu.sv"
             ],
-            "portada": null,
-            "galeria": []
+            "portada": "imagenes/ponencia-4-victoria-rivas-edwin-umana-portada.jpg",
+            "galeria": [
+                "imagenes/ponencia-4-victoria-rivas-edwin-umana-1.jpg",
+                "imagenes/ponencia-4-victoria-rivas-edwin-umana-2.jpg",
+                "imagenes/ponencia-4-victoria-rivas-edwin-umana-3.jpg",
+                "imagenes/ponencia-4-victoria-rivas-edwin-umana-4.jpg",
+                "imagenes/ponencia-4-victoria-rivas-edwin-umana-5.jpg",
+                "imagenes/ponencia-4-victoria-rivas-edwin-umana-6.jpg"
+            ]
         }
     ]
 }

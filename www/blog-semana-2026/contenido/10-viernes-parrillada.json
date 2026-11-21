@@ -14,8 +14,12 @@
             "autores": [
                 "ml23011@ues.edu.sv"
             ],
-            "portada": null,
-            "galeria": []
+            "portada": "imagenes/parrillada-portada.jpg",
+            "galeria": [
+                "imagenes/parrillada-1.jpg",
+                "imagenes/parrillada-2.jpg",
+                "imagenes/parrillada-3.jpg"
+            ]
         }
     ]
 }

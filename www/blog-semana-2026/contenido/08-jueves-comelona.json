@@ -14,8 +14,12 @@
             "autores": [
                 "ml23011@ues.edu.sv"
             ],
-            "portada": null,
-            "galeria": []
+            "portada": "imagenes/comelona-de-pizza-portada.jpg",
+            "galeria": [
+                "imagenes/comelona-de-pizza-1.jpg",
+                "imagenes/comelona-de-pizza-2.jpg",
+                "imagenes/comelona-de-pizza-3.jpg"
+            ]
         }
     ]
 }

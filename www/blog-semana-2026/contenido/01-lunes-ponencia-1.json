@@ -14,8 +14,15 @@
             "autores": [
                 "ym23003@ues.edu.sv"
             ],
-            "portada": null,
-            "galeria": []
+            "portada": "imagenes/ponencia-iot-agroindustria-portada.jpg",
+            "galeria": [
+                "imagenes/ponencia-iot-agroindustria-1.jpg",
+                "imagenes/ponencia-iot-agroindustria-2.jpg",
+                "imagenes/ponencia-iot-agroindustria-3.jpg",
+                "imagenes/ponencia-iot-agroindustria-4.jpg",
+                "imagenes/ponencia-iot-agroindustria-5.jpg",
+                "imagenes/ponencia-iot-agroindustria-6.jpg"
+            ]
         }
     ]
 }
